@@ -6,8 +6,13 @@
     %meta{content: "telephone=no", name: "format-detection"}
     %meta{content: "user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi", name: "viewport"}
     / Bootstrap
-    %link{href: "css/vendor/bootstrap.min.css", rel: "stylesheet", type: "text/css"}
-    %link{href: "css/vendor/bootstrap-theme.min.css", rel: "stylesheet", type: "text/css" }
+    / %link{href: "css/vendor/bootstrap.min.css", rel: "stylesheet", type: "text/css"}
+    / %link{href: "css/vendor/bootstrap-theme.min.css", rel: "stylesheet", type: "text/css" }
+
+    %link{href: "css/vendor/topcoat-mobile-dark.min.css", rel: "stylesheet", type: "text/css"}
+
+    %link{href: "css/index.css", rel: "stylesheet", type: "text/css"}
+    %link{href: "css/pageslider.css", rel: "stylesheet", type: "text/css"}
 
     / this is for multipage app
     / %link{href: "css/#{file_basename_without_ext}.css", rel: "stylesheet", type: "text/css"}
@@ -25,7 +30,7 @@
     %script{src: "cordova.js"}
 
     / RequireJS
-    %script{data: { main: "js/app/main"}, src: "js/vendor/require.js"}
+    %script{data: { main: "js/main"}, src: "js/vendor/require.js"}
 
     / Use this line if you are working with phonegap instead
     / of cordova
@@ -33,6 +38,3 @@
 
     / this is for multipage app
     / %script{src: "js/#{file_basename_without_ext}.js"}
-
-    :javascript
-      app.initialize();

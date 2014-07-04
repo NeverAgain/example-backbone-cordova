@@ -2,7 +2,7 @@ define (require) ->
 
   $ = require("jquery")
   Backbone = require("backbone")
-  PageSlider = require("app/utils/pageslider")
+  PageSlider = require("pageslider")
   HomeView = require("app/views/Home")
   slider = new PageSlider($("body"))
   homeView = new HomeView()
@@ -19,7 +19,7 @@ define (require) ->
 
     employeeDetails: (id) ->
       require [
-        "app/models/employee"
+        "app/models/memory/employee"
         "app/views/Employee"
       ], (models, EmployeeView) ->
         employee = new models.Employee(id: id)
@@ -33,7 +33,7 @@ define (require) ->
 
     reports: (id) ->
       require [
-        "app/models/employee"
+        "app/models/memory/employee"
         "app/views/Reports"
       ], (models, ReportsView) ->
         employee = new models.Employee(id: id)

@@ -1,18 +1,21 @@
 require.config
-  baseUrl: 'js/vendor'
+  baseUrl: 'js'
   paths:
-    jquery: 'jquery-1.11.1.min'
-    backbone: 'backbone-1.1.2.min'
-    bootstrap: 'bootstrap.min'
+    jquery: 'vendor/jquery-1.11.1.min'
+    backbone: 'vendor/backbone-1.1.2.min'
+    bootstrap: 'vendor/bootstrap.min'
+    router: 'app/router'
+    pageslider: 'vendor/pageslider'
+    text: 'vendor/text'
 
   shim:
     'backbone':
-      deps: ['underscore', 'jquery']
+      deps: ['vendor/underscore-min', 'jquery']
       exports: 'Backbone'
     'underscore':
       exports: '_'
 
-require ['jquery', 'backbone', 'app/router'], ($, Backbone, Router) ->
+require ['jquery', 'backbone', 'router'], ($, Backbone, Router) ->
   router = new Router()
 
   $("body").on "click", ".back-button", (event) ->
